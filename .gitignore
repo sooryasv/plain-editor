@@ -1,0 +1,28 @@
+# Build outputs
+build/
+app/build/
+**/build/
+
+# Gradle & Local configuration
+.gradle/
+local.properties
+
+# IDE & workspace files
+*.iml
+.idea/
+.vscode/
+
+# Signing keys & secrets
+*.keystore
+*.jks
+
+# Temporary / Generated / Benchmark artifacts
+captures/
+.cxx/
+inventory.txt
+.artifacts/
+*.log
+local.properties
+inventory.txt
+app-release.apk
+*.idsig

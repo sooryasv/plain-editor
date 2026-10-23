@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/editor_bg">
+
+    <!-- Tab strip: one chip per open document (max 10), built in code. -->
+    <HorizontalScrollView
+        android:id="@+id/tab_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/symbol_bg"
+        android:scrollbars="none">
+        <LinearLayout
+            android:id="@+id/tab_strip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+    </HorizontalScrollView>
+
+    <!-- Find / replace bar (hidden until Find is used). -->
+    <LinearLayout
+        android:id="@+id/find_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/symbol_bg"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <EditText
+                android:id="@+id/find_query"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/find_hint"
+                android:singleLine="true"
+                android:inputType="text|textNoSuggestions"
+                android:imeOptions="actionSearch|flagNoExtractUi"
+                android:importantForAutofill="no"
+                android:textColor="@color/editor_text"
+                android:textColorHint="@color/editor_hint" />
+            <Button android:id="@+id/find_prev" style="@android:style/Widget.Material.Button.Borderless"
+                android:layout_width="wrap_content" android:layout_height="48dp" android:minWidth="0dp"
+                android:text="@string/find_prev" android:textAllCaps="false" android:focusable="false" />
+            <Button android:id="@+id/find_next" style="@android:style/Widget.Material.Button.Borderless"
+                android:layout_width="wrap_content" android:layout_height="48dp" android:minWidth="0dp"
+                android:text="@string/find_next" android:textAllCaps="false" android:focusable="false" />
+            <Button android:id="@+id/find_close" style="@android:style/Widget.Material.Button.Borderless"
+                android:layout_width="wrap_content" android:layout_height="48dp" android:minWidth="0dp"
+                android:text="@string/find_close" android:textAllCaps="false" android:focusable="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <CheckBox android:id="@+id/find_case" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/find_case" android:textColor="@color/editor_text" android:focusable="false" />
+            <CheckBox android:id="@+id/find_word" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/find_word" android:textColor="@color/editor_text" android:focusable="false" />
+            <TextView android:id="@+id/find_count" android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:gravity="end" android:textColor="@color/tab_text_dim" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/replace_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+            <EditText
+                android:id="@+id/replace_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/replace_hint"
+                android:singleLine="true"
+                android:inputType="text|textNoSuggestions"
+                android:imeOptions="actionDone|flagNoExtractUi"
+                android:importantForAutofill="no"
+                android:textColor="@color/editor_text"
+                android:textColorHint="@color/editor_hint" />
+            <Button android:id="@+id/replace_one" style="@android:style/Widget.Material.Button.Borderless"
+                android:layout_width="wrap_content" android:layout_height="48dp" android:minWidth="0dp"
+                android:text="@string/replace_one" android:textAllCaps="false" android:focusable="false" />
+            <Button android:id="@+id/replace_all" style="@android:style/Widget.Material.Button.Borderless"
+                android:layout_width="wrap_content" android:layout_height="48dp" android:minWidth="0dp"
+                android:text="@string/replace_all" android:textAllCaps="false" android:focusable="false" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Content: the text editor (a ScrollView around the EditText, so fling scrolling works) or the PDF viewer. -->
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="vertical">
+            <app.plaintext.editor.ui.EditorEditText
+                android:id="@+id/editor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="top|start"
+                android:hint="@string/editor_hint"
+                android:textColorHint="@color/editor_hint"
+                android:textColor="@color/editor_text"
+                android:textSize="16sp"
+                android:fontFamily="monospace"
+                android:inputType="textMultiLine|textNoSuggestions"
+                android:imeOptions="flagNoExtractUi"
+                android:importantForAutofill="no"
+                android:saveEnabled="false"
+                android:freezesText="false"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp" />
+        </ScrollView>
+    </FrameLayout>
+
+    <!-- Large-file navigation (only shown for documents that do not fit in one editor window). -->
+    <SeekBar
+        android:id="@+id/nav_seek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="1000"
+        android:contentDescription="@string/cd_seek"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/symbol_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider" />
+
+    <HorizontalScrollView
+        android:id="@+id/symbol_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/symbol_bg"
+        android:scrollbars="none"
+        android:contentDescription="@string/cd_symbol_bar">
+        <LinearLayout
+            android:id="@+id/symbol_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+    </HorizontalScrollView>
+</LinearLayout>

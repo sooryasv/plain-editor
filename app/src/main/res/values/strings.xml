@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Plain Editor</string>
+    <string name="editor_hint">Start typing…</string>
+
+    <string name="menu_new">New</string>
+    <string name="menu_open">Open…</string>
+    <string name="menu_recent">Recent files…</string>
+    <string name="menu_save">Save</string>
+    <string name="menu_save_as">Save As…</string>
+    <string name="menu_export">Export copy…</string>
+    <string name="menu_file_name">File name…</string>
+    <string name="menu_undo">Undo</string>
+    <string name="menu_redo">Redo</string>
+    <string name="menu_wrap">Word wrap</string>
+    <string name="menu_mono">Monospace font</string>
+    <string name="menu_symbols">Symbol bar</string>
+    <string name="menu_about">About &amp; privacy</string>
+
+    <string name="status_saved">Saved</string>
+    <string name="status_saving">Saving…</string>
+    <string name="status_unsaved">Unsaved</string>
+    <string name="status_unsaved_backed_up">Unsaved (draft backed up)</string>
+    <string name="status_new">New, not saved</string>
+    <string name="status_opening">Opening…</string>
+    <string name="status_read_only">read-only</string>
+
+    <string name="dlg_unsaved_title">Unsaved changes</string>
+    <string name="dlg_unsaved_message">“%1$s” has changes that are not saved to a file. A draft backup is kept on this device until you discard it.</string>
+    <string name="btn_save">Save</string>
+    <string name="btn_discard">Discard</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_ok">OK</string>
+    <string name="btn_clear_list">Clear list</string>
+    <string name="dlg_name_title">File name</string>
+    <string name="dlg_recent_title">Recent files</string>
+    <string name="msg_no_recent">No recent files yet</string>
+    <string name="err_no_picker_title">No file picker</string>
+    <string name="err_no_picker_message">This device has no system file picker (Storage Access Framework), which this app needs to open and save files.</string>
+    <string name="msg_undo_reset">Undo history was reset.</string>
+
+    <string name="about_title">Plain Editor</string>
+    <string name="about_body">Version %1$s\nMade by Soorya S V\nMaintainer: Vaixus Technologies\n\nA small offline editor for .md, .txt, .yml/.yaml, .py, .html, .json files and PDF viewer.\n\nPrivacy: the app has no network permission, no analytics and no accounts. Files are read and written only through the Android file picker you use. A draft backup of unsaved text is kept in this app\'s private storage and removed when you save or discard.\n\nLimits: UTF-8 files up to %2$d MiB, 10 tabs.\n\nPerformance on this device (milliseconds):\n%3$s</string>
+
+    <string name="cd_symbol_bar">Common characters</string>
+
+    <string name="menu_find">Find</string>
+    <string name="menu_replace">Find and replace</string>
+    <string name="menu_new_tab">New tab</string>
+    <string name="menu_close_tab">Close tab</string>
+    <string name="menu_next_tab">Next tab</string>
+    <string name="menu_prev_tab">Previous tab</string>
+    <string name="menu_top">Jump to top</string>
+    <string name="menu_bottom">Jump to bottom</string>
+    <string name="menu_indent">Indentation…</string>
+
+    <string name="find_hint">Find</string>
+    <string name="replace_hint">Replace with</string>
+    <string name="find_prev">Prev</string>
+    <string name="find_next">Next</string>
+    <string name="find_close">Close</string>
+    <string name="find_case">Match case</string>
+    <string name="find_word">Whole word</string>
+    <string name="replace_one">Replace</string>
+    <string name="replace_all">All</string>
+    <string name="find_none">No matches</string>
+
+    <string name="tool_top">Top</string>
+    <string name="tool_bottom">Bottom</string>
+    <string name="tool_tab">Tab</string>
+    <string name="tool_outdent">Outdent</string>
+    <string name="tool_indent">Indent</string>
+
+    <string name="dlg_exit_title">Unsaved changes</string>
+    <string name="dlg_exit_message">These tabs have unsaved changes:\n\n%1$s\n\nA draft backup of each is kept on this device. Exit and keep the drafts, or discard them?</string>
+    <string name="btn_exit_keep">Exit, keep drafts</string>
+    <string name="btn_discard_all">Discard all</string>
+    <string name="dlg_indent_title">Indentation</string>
+    <string name="indent_spaces">%1$d spaces</string>
+    <string name="indent_use_tabs">Use tab characters instead of spaces</string>
+    <string name="indent_note">YAML files always use spaces.</string>
+    <string name="msg_indent_saved">Indentation: %1$s</string>
+
+    <string name="pdf_prev">Prev</string>
+    <string name="pdf_next">Next</string>
+    <string name="pdf_zoom_in">+</string>
+    <string name="pdf_zoom_out">−</string>
+    <string name="pdf_fit">Fit</string>
+    <string name="pdf_goto_title">Go to page</string>
+    <string name="pdf_goto_hint">Page number (1–%1$d)</string>
+    <string name="pdf_loading">Opening PDF…</string>
+    <string name="pdf_error">This PDF cannot be displayed: %1$s</string>
+    <string name="cd_seek">Position in the document</string>
+    <string name="cd_tab_close">Close tab %1$s</string>
+    <string name="cd_tab_new">New tab</string>
+</resources>

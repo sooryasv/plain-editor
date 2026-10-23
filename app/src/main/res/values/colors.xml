@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bar_bg">#F7F8FA</color>
+    <color name="editor_bg">#FDFDFE</color>
+    <color name="editor_text">#1B2027</color>
+    <color name="editor_hint">#8A939E</color>
+    <color name="symbol_bg">#EBEEF2</color>
+    <color name="symbol_text">#1B2027</color>
+    <color name="divider">#D5DAE0</color>
+    <color name="accent">#1F5FA8</color>
+    <color name="status_saved">#1B7348</color>
+    <color name="status_unsaved">#B4530A</color>
+    <color name="status_neutral">#5D6773</color>
+    <color name="launcher_bg">#1F3550</color>
+    <color name="tab_active_bg">#E3E8EF</color>
+    <color name="tab_text">#1B2027</color>
+    <color name="tab_text_dim">#5D6773</color>
+    <color name="find_highlight">#66F2A444</color>
+</resources>

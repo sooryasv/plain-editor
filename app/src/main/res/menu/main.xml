@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_undo" android:title="@string/menu_undo"
+        android:icon="@drawable/ic_undo" android:showAsAction="ifRoom" />
+    <item android:id="@+id/action_redo" android:title="@string/menu_redo"
+        android:icon="@drawable/ic_redo" android:showAsAction="ifRoom" />
+    <item android:id="@+id/action_find" android:title="@string/menu_find"
+        android:icon="@drawable/ic_search" android:showAsAction="ifRoom" />
+    <item android:id="@+id/action_save" android:title="@string/menu_save"
+        android:icon="@drawable/ic_save" android:showAsAction="ifRoom" />
+    <item android:id="@+id/action_new" android:title="@string/menu_new_tab" android:showAsAction="never" />
+    <item android:id="@+id/action_open" android:title="@string/menu_open" android:showAsAction="never" />
+    <item android:id="@+id/action_recent" android:title="@string/menu_recent" android:showAsAction="never" />
+    <item android:id="@+id/action_save_as" android:title="@string/menu_save_as" android:showAsAction="never" />
+    <item android:id="@+id/action_export" android:title="@string/menu_export" android:showAsAction="never" />
+    <item android:id="@+id/action_file_name" android:title="@string/menu_file_name" android:showAsAction="never" />
+    <item android:id="@+id/action_close_tab" android:title="@string/menu_close_tab" android:showAsAction="never" />
+    <item android:id="@+id/action_replace" android:title="@string/menu_replace" android:showAsAction="never" />
+    <item android:id="@+id/action_top" android:title="@string/menu_top" android:showAsAction="never" />
+    <item android:id="@+id/action_bottom" android:title="@string/menu_bottom" android:showAsAction="never" />
+    <item android:id="@+id/action_next_tab" android:title="@string/menu_next_tab" android:showAsAction="never" />
+    <item android:id="@+id/action_prev_tab" android:title="@string/menu_prev_tab" android:showAsAction="never" />
+    <item android:id="@+id/action_indent" android:title="@string/menu_indent" android:showAsAction="never" />
+    <item android:id="@+id/action_wrap" android:title="@string/menu_wrap" android:checkable="true" android:showAsAction="never" />
+    <item android:id="@+id/action_mono" android:title="@string/menu_mono" android:checkable="true" android:showAsAction="never" />
+    <item android:id="@+id/action_symbols" android:title="@string/menu_symbols" android:checkable="true" android:showAsAction="never" />
+    <item android:id="@+id/action_about" android:title="@string/menu_about" android:showAsAction="never" />
+</menu>

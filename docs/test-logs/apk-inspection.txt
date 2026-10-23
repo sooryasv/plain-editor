@@ -1,0 +1,22 @@
+# Static inspection of app/build/outputs/apk/debug/app-debug.apk (generated for v1.1.1)
+package: name='app.plaintext.editor' versionCode='3' versionName='1.1.1' platformBuildVersionName='14' platformBuildVersionCode='34' compileSdkVersion='34'
+sdkVersion:'26'
+targetSdkVersion:'34'
+application-label:'Plain Editor'
+launchable-activity: name='app.plaintext.editor.ui.MainActivity'
+
+## Permissions: NONE declared in AndroidManifest.xml
+
+## Manifest Flags
+allowBackup: false
+enableOnBackInvokedCallback: true
+launchMode: singleTask
+windowSoftInputMode: adjustResize
+theme: @style/AppTheme
+
+## Intent Filters
+- ACTION_VIEW & ACTION_EDIT for text/plain, text/markdown, text/html, application/json, application/x-yaml, text/x-python, application/pdf
+- Path patterns for .md, .markdown, .txt, .yml, .yaml, .py, .html, .htm, .json, .pdf (content:// scheme)
+
+## Test Summary
+215 JVM unit tests pass, 0 lint errors, debug build verified.
